@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+<form id="form2" name="form2" method="post" action="{:url('/index/index/logindo')}">
+	  <table width="600" border="1" align="center">
+	    <tbody>
+	      <tr>
+	        <td colspan="2" align="center">登录</td>
+	      
+          </tr>
+	      <tr>
+	        <td align="right">请输入用户名:</td>
+	        <td><label for="textfield"></label>
+            <input type="text" name="name" id="name"></td>
+          </tr>
+	      <tr>
+	        <td align="right">请输入密码:</td>
+	        <td><label for="textfield2"></label>
+            <input type="text" name="pwd" id="pwd"></td>
+          </tr>
+	      <tr>
+	        <td colspan="2" align="center"> 
+            <input type="submit" name="submit" id="submit" value="登录">
+            <a href="{:url('/index/index/reg')}">注册</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+	</form>
+</body>
+</html>
