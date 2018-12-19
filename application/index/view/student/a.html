@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+<form action="{:url('/index/Teacher/jieguo')}" method="post">
+<div align="center">
+				<span>单选题</span><br>
+				{volist name='list1' id='v'}
+				<span>{$v.choice_info}</span><br>
+				<span>{$v.choice_1}</span><br>
+                <span>{$v.choice_2}</span><br>
+                <span>{$v.choice_3}</span><br>
+                <span>{$v.choice_4}</span><br>
+                <span>输入答案<input type="text" name="name[]"></span><br>
+                <span>&nbsp;</span>
+                {/volist}
+
+</div>
+<div align="center">
+				<span>判断题</span><br>
+				{volist name='list2' id='v'}
+				<span>{$v.true_info}</span><br>
+                <span>输入答案<input type="text" name="array"></span><br>
+                {/volist}
+
+</div>
+
+
+<div align="center">
+				<span>材料题</span><br>
+				{volist name='list3' id='v'}
+				<span>{$v.design_ques}</span><br>
+                <span>输入答案<input type="text" name="array3"></span><br>
+                {/volist}
+
+
+</div>
+<input type="submit" value="提交">
+</form>
+</body>
+</html>

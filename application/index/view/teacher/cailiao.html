@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+<form action="{:url('/index/Teacher/jieguo')}" method="post">
+<div align="center">
+<table>
+<tr>
+<td>题干</td>
+<td>编辑</td>
+<td>删除</td>
+</tr>
+{volist name='list1' id='v'}
+<tr>
+<td>{$v.design_ques}</td>
+          
+                <td><a href="{:url('/index/Teacher/shanchu2',array('id'=>$v['design_id']))}">删除</a></td>
+        		<td><a href="{:url('/index/Teacher/bianjicai',array('id'=>$v['design_id']))}">编辑</a></td>  
+
+</tr>
+{/volist}
+</table>
+	</div>		
+</form>
+</body>
+</html>

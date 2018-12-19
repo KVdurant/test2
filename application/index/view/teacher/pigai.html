@@ -80,30 +80,38 @@ table{ background-color:#1abc9c; width:500px; height:60px; margin: 0 auto; borde
 <div class="header">
 
 
-  <h1>老师管理</h1>
+  <h1>试卷批改</h1>
 
 
 </div>
 
 <div class="navbar">
 <table align="center">
+
 <tr>
-  <th>老师管理</th>
-    <td><button type="button" onclick="location.href='addteacher'">添加老师</td>
-    
-
-
+	<td>学号</td>
+    <td>姓名</td>
+    <td>班级</td>
+    <td>考试科目</td>
+    <td>试卷号</td>
 </tr>
-<tr>
-  <th>老师信息管理</th>
-    <td><button type="button" onclick="location.href='updatet'">编辑信息</td>
-
-
-</tr>  
- 
+{volist name='list' id='v'}
+	<tr>
+    <tr></tr>
+    	<td>{$v.snumber}</td>
+        <td>{$v.sname}</td>
+        <td>{$v.sclass}</td>
+        <td>{$v.tclass}</td>
+        <td>{$v.examid}</td>
+        
+        <td><a href="{:url('/index/Teacher/gai',array('snumber'=>$v['snumber'],'tclass'=>$v['tclass']))}">批改</a></td>  
+        
+        
+    </tr> 
+{/volist}
   
   
   </table>
-
+  
 </div>
 <a href="javascript:history.back(-1)">返回上一页</a>

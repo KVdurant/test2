@@ -48,6 +48,7 @@ class Index extends \think\Controller
 			$userinfo=$user->where($data)->find();
 			if($userinfo){
 				session('tnumber', $userinfo['tnumber']);
+				session('tname', $userinfo['tname']);
 				$this->success('登录成功',url('/index/Teacher/index'));
 			}
 			else{
@@ -64,7 +65,7 @@ class Index extends \think\Controller
 			 'spassword' => input('Possword'),
 			];
 			$userinfo=$user->where($data)->find();
-			$_SESSION['snumber']=$userinfo['snumber'];
+			session('snumber', $userinfo['snumber']);
 			if($userinfo){
 				
 				$this->success('登录成功',url('/index/Student/index'));

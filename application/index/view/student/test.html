@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>管理员</title>
+<title></title>
 
 <style>
 * {
@@ -76,30 +76,47 @@ table{ background-color:#1abc9c; width:500px; height:60px; margin: 0 auto; borde
 </head>
 
 <body>
+  
+	
+  <div class="header">
 
-<div class="header">
 
-
-  <h1>老师管理</h1>
+  <h1>考试确认</h1>
 
 
 </div>
 
+
+
 <div class="navbar">
 <table align="center">
 <tr>
-  <th>老师管理</th>
-    <td><button type="button" onclick="location.href='addteacher'">添加老师</td>
-    
+  <td>考生姓名</td>
+  <td>考生编号</td>
+  <td>考试科目</td>
+  <td colspan="2">操作</td>
 
 
-</tr>
+
+</tr><form action="{:url('/index/Student/agreement')}" method="post">
 <tr>
-  <th>老师信息管理</th>
-    <td><button type="button" onclick="location.href='updatet'">编辑信息</td>
 
+  <td>{$list.sname}</td>
+  <td>{$list.snumber}</td>
 
-</tr>  
+	 <td>
+     
+  <select name="kaoshi">
+  <option value="云架构" name="name">云架构</option>
+  <option value="操作系统" name="name">操作系统</option>
+  <option value="web" name="name">Web</option>
+  <option value="云平台开发" name="name">云平台开发</option>
+	</select>
+	
+</td>
+  <td><input type="submit" value="确认考试"></td>
+
+</tr>  </form>
  
   
   
@@ -107,3 +124,5 @@ table{ background-color:#1abc9c; width:500px; height:60px; margin: 0 auto; borde
 
 </div>
 <a href="javascript:history.back(-1)">返回上一页</a>
+</body>
+	</html>

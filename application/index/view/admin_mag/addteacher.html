@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>管理员</title>
+<title>添加删除</title>
 
 <style>
 * {
@@ -80,7 +80,7 @@ table{ background-color:#1abc9c; width:500px; height:60px; margin: 0 auto; borde
 <div class="header">
 
 
-  <h1>老师管理</h1>
+  <h1>添加老师</h1>
 
 
 </div>
@@ -88,22 +88,33 @@ table{ background-color:#1abc9c; width:500px; height:60px; margin: 0 auto; borde
 <div class="navbar">
 <table align="center">
 <tr>
-  <th>老师管理</th>
-    <td><button type="button" onclick="location.href='addteacher'">添加老师</td>
-    
-
-
+<form action="{:url('/index/Admin_mag/add_teacher')}" method="post">
+    <td align="left">姓名：</td>
+	<td align="right"><input align="absbottom" name="tname"></td>
 </tr>
 <tr>
-  <th>老师信息管理</th>
-    <td><button type="button" onclick="location.href='updatet'">编辑信息</td>
-
-
+      <td align="left">number：</td>
+	  <td align="right"><input align="absbottom" name="tnumber"></td>
 </tr>  
  
-  
-  
+<tr>
+      <td align="left">password：</td>
+	  <td align="right"><input align="absbottom" name="tpassword"></td>
+</tr>
+<tr>
+      <td align="left">class：</td>
+	  <td align="right"><input align="absbottom" name="tclass"></td>
+</tr>
+  <tr>
+	  <td align="center" colspan="2">
+          <input type="submit" value="确定" />
+	  </td>
+  </tr>
+ </form> 
   </table>
+	
 
 </div>
 <a href="javascript:history.back(-1)">返回上一页</a>
+</body>
+	</html>

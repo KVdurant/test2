@@ -80,30 +80,36 @@ table{ background-color:#1abc9c; width:500px; height:60px; margin: 0 auto; borde
 <div class="header">
 
 
-  <h1>老师管理</h1>
+  <h1>学生管理信息管理</h1>
 
 
 </div>
 
 <div class="navbar">
 <table align="center">
+
 <tr>
-  <th>老师管理</th>
-    <td><button type="button" onclick="location.href='addteacher'">添加老师</td>
-    
-
-
+	<td>学生账号</td>
+    <td>学生姓名</td>
+    <td>学生密码</td>
+    <td>学生所在系</td>
+    <td>学生所在班级</td>  
 </tr>
-<tr>
-  <th>老师信息管理</th>
-    <td><button type="button" onclick="location.href='updatet'">编辑信息</td>
-
-
-</tr>  
- 
+{volist name='list' id='v'}
+	<tr>
+    <tr></tr>
+    	<td>{$v.snumber}</td>
+        <td>{$v.sname}</td>
+        <td>{$v.spassword}</td>
+        <td>{$v.scloud}</td>
+        <td>{$v.sclass}</td>
+        <td><a href="{:url('/index/Admin_mag/del_student',array('id'=>$v['sid']))}">删除</a></td>
+        <td><a href="{:url('/index/Admin_mag/updates/',array('id'=>$v['sid']))}">编辑</a></td>  
+    </tr> 
+{/volist}
   
   
   </table>
-
+  
 </div>
 <a href="javascript:history.back(-1)">返回上一页</a>
